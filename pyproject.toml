@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "dynasty-dl"
+version = "0.1.0"
+description = "Download manga from dynasty-scans.com."
+authors = ["Temujin Lampasa <temujinlampasa@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "dynasty_dl"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "*"
+bs4 = "^0.0.1"
+tqdm = "^4.64.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.poetry.scripts]
+dynasty-dl = "dynasty_dl.__main__:main"
